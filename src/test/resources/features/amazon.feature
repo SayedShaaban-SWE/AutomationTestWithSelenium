@@ -1,6 +1,7 @@
 Feature: Login and add some orders to the cart
   Background: set language to be english
     Given I select english from languages list
+
   @not-registered-email
   Scenario: Verify that user cannot log in with valid but not registered email
     When I click on sign in button at the top right corner

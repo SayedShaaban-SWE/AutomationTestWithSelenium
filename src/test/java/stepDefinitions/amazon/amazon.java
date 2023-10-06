@@ -6,8 +6,11 @@ import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import pages.*;
 
+import com.applitools.eyes.selenium.fluent.Target;
+
 import static org.junit.jupiter.api.Assertions.*;
 import static stepDefinitions.Hooks.driver;
+import static stepDefinitions.Hooks.eyes;
 public class amazon {
     public HomePage homePage = new HomePage(driver);
     public LoginPage loginPage = new LoginPage(driver);
@@ -23,6 +26,7 @@ public class amazon {
     @Then("I should navigated to the Sign in screen")
     public void iShouldNavigatedToTheSignInScreen() {
         assertTrue(loginPage.getLoginTxt().contains("Sign in"));
+        eyes.check(Target.window());
     }
 
     @When("I enter valid email but not registered like {string}")
