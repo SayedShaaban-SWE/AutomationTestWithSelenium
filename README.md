@@ -8,3 +8,6 @@
     - Download and add allure frmework to systems environment variables.
     - After execution TestRunner class and go to console and run this command "allure serve".
     - You will see web browser page opened with report including (screenshot if scenario failed).
+
+## Github Actions used:
+- Run Unit test with workflow files.
